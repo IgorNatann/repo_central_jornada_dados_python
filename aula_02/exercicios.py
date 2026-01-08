@@ -105,19 +105,19 @@ print(f"A string concatenada é: {concatenated_string}")
 # #### Booleanos (`bool`)
 
 # 16. Escreva um programa que avalie duas expressões booleanas inseridas pelo usuário e retorne o resultado da operação AND entre elas.
-bool_1 = input("Digite o primeiro valor booleano (True/False): ")
-bool_2 = input("Digite o segundo valor booleano (True/False): ")
+bool_1 = input("Digite o primeiro valor booleano (True/False): ").strip().lower() == "true"
+bool_2 = input("Digite o segundo valor booleano (True/False): ").strip().lower() == "true"
 result = bool_1 and bool_2
 print(f"O resultado da operação AND entre {bool_1} e {bool_2} é: {result}")
 
 # 17. Crie um programa que receba dois valores booleanos do usuário e retorne o resultado da operação OR.
-bool_1 = input("Digite o primeiro valor booleano (True/False): ")
-bool_2 = input("Digite o segundo valor booleano (True/False): ")
+bool_1 = input("Digite o primeiro valor booleano (True/False): ").strip().lower() == "true"
+bool_2 = input("Digite o segundo valor booleano (True/False): ").strip().lower() == "true"
 result = bool_1 or bool_2
 print(f"O resultado da operação OR entre {bool_1} e {bool_2} é: {result}")
 
 # 18. Desenvolva um programa que peça ao usuário para inserir um valor booleano e, em seguida, inverta esse valor.
-bool_value = input("Digite um valor booleano (True/False): ")
+bool_value = input("Digite um valor booleano (True/False): ").strip().lower() == "true"
 inverted_bool = not bool_value
 print(f"O valor invertido de {bool_value} é: {inverted_bool}")
 
