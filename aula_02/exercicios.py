@@ -137,6 +137,8 @@ print(f"Os números {number_1} e {number_2} são diferentes? {result}")
 # #### try-except e if
 
 # 21: Conversor de Temperatura
+
+
 # 22: Verificador de Palíndromo
 # 23: Calculadora Simples
 # 24: Classificador de Números
