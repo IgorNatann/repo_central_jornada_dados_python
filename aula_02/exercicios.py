@@ -137,9 +137,13 @@ print(f"Os números {number_1} e {number_2} são diferentes? {result}")
 # #### try-except e if
 
 # 21: Conversor de Temperatura
-
+temp = float(input("Digite a temperatura em Celsius: "))
+fahrenheit = (temp * 1.8) + 32
+print(f"{temp} graus Celsius equivalem a {fahrenheit} graus Fahrenheit.")
 
 # 22: Verificador de Palíndromo
+
+
 # 23: Calculadora Simples
 # 24: Classificador de Números
 # 25: Conversão de Tipo com Validação
