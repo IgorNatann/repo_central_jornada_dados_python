@@ -53,4 +53,35 @@ try:
         print(f"O resultado de {num1} {operador} {num2} é: {resultado}")
 
 # 24: Classificador de Números
+# Escreva um programa que solicite ao usuário para digitar um número. Utilize try-except para assegurar que a entrada seja numérica e utilize if-elif-else para classificar o número como "positivo", "negativo" ou "zero". Adicionalmente, identifique se o número é "par" ou "ímpar".
+
+try:
+    num = float(input("Digite um número: "))
+    if num > 0:
+        classificacao = "positivo"
+    elif num < 0:
+        classificacao = "negativo"
+    else:
+        classificacao = "zero"
+
+    if num % 2 == 0:
+        paridade = "par"
+    else:
+        paridade = "ímpar"
+
+    print(f"O número {num} é {classificacao} e {paridade}.")
+except ValueError:
+    print("Entrada inválida. Por favor, digite um número válido.")
+
 # 25: Conversão de Tipo com Validação
+# Crie um script que solicite ao usuário uma lista de números separados por vírgula. O programa deve converter a string de entrada em uma lista de números inteiros. Utilize try-except para tratar a conversão de cada número e validar que cada elemento da lista convertida é um inteiro. Se a conversão falhar ou um elemento não for um inteiro, imprima uma mensagem de erro. Se a conversão for bem-sucedida para todos os elementos, imprima a lista de inteiros.
+
+entrada_lista = input("Digite uma lista de números separados por vírgula: ")
+numeros_str = entrada_lista.split(",")
+numeros_int = []
+try:
+    for num in numeros_str:
+        numeros_int.append(int(num.strip()))
+    print("Lista de inteiros:", numeros_int)
+except ValueError:
+    print("Erro: certifique-se de que todos os elementos são números inteiros válidos.")
