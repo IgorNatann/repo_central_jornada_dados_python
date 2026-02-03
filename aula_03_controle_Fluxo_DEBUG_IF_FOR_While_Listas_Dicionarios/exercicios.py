@@ -3,20 +3,32 @@
 # que todos os registros tenham valores positivos para `quantidade` e `preço`. 
 # Escreva um programa que verifique esses campos e imprima "Dados válidos" se ambos 
 # forem positivos ou "Dados inválidos" caso contrário.
+
 quantidade = 10
 preco = 25.5   
 
 try:
     if quantidade > 0 and preco > 0:
-        print("Dados válidos")
+        print("Dados validos")
     else:
         print("Dados inválidos")
-
-
+except ValueError as e:
+    print(e)
+    
 ### Exercício 2: Classificação de Dados de Sensor
 # Imagine que você está trabalhando com dados de sensores IoT. 
 # Os dados incluem medições de temperatura. Você precisa classificar cada leitura 
 # como 'Baixa', 'Normal' ou 'Alta'. Considerando que:
+
+temperatura = 22.5
+
+if temperatura < 18:
+    print("Baixa")
+elif temperatura >= 18 and temperatura <= 25:
+    print("Normal")
+else:
+    print("Alta")
+
 
 ### Exercício 3: Filtragem de Logs por Severidade
 # Você está analisando logs de uma aplicação e precisa filtrar mensagens 
