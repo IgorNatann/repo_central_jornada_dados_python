@@ -97,6 +97,25 @@ print(contagem)
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
 
+# Lista original
+numeros = [10, 20, 30, 40, 50]
+
+# Encontra o menor e maior valor
+min_val = min(numeros)
+max_val = max(numeros)
+
+# Cria lista vazia para guardar os normalizados
+numeros_normalizados = []
+
+# Percorre cada número e normaliza
+for num in numeros:
+    num_normalizado = (num - min_val) / (max_val - min_val)
+    numeros_normalizados.append(num_normalizado)
+
+# Mostra o resultado
+print("Original:", numeros)
+print("Normalizado:", numeros_normalizados)
+
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
 
