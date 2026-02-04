@@ -119,6 +119,25 @@ print("Normalizado:", numeros_normalizados)
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
 
+usuarios = [
+    {'nome': 'Ana', 'idade': 25, 'email': 'ana@email.com'},
+    {'nome': 'Bruno', 'idade': 30},  # falta o 'email'
+    {'nome': 'Carla', 'email': 'carla@email.com'},  # falta a 'idade'
+    {'nome': 'Diego', 'idade': 28, 'email': 'diego@email.com'}
+]
+# cria lista vazia
+usuarios_completos = []  
+usuarios_incompletos = []
+
+ # percorre cada usuário
+for usuario in usuarios: 
+    if 'nome' in usuario and 'idade' in usuario and 'email' in usuario:
+        usuarios_completos.append(usuario)  # adiciona se estiver completo
+    else:
+        usuarios_incompletos.append(usuario)  # adiciona se estiver incompleto
+print(f"Usuários completos: {usuarios_completos}")
+print(f"Usuários incompletos: {usuarios_incompletos}")
+
 ### Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
 
