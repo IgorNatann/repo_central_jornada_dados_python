@@ -201,10 +201,50 @@ while True:
         break
     else:
         print("Número inválido. Tente novamente.")
-        
+
 ### Exercício 13. Consumo de API Simulado
 # Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
 
+# Simulação de API com 3 páginas
+api_dados = {
+    1: ['Ana', 'Bruno', 'Carla'],
+    2: ['Diego', 'Elena', 'Felipe'],
+    3: ['Gabriela', 'Hugo'],
+}
+
+def buscar_pagina(numero_pagina):
+    """Simula buscar dados de uma página da API"""
+    if numero_pagina in api_dados:
+        return api_dados[numero_pagina]
+    else:
+        return None  # Sem mais dados
+
+# Começa na página 1
+pagina_atual = 1
+todos_usuarios = []  # Lista para guardar TODOS os usuários
+
+print("Iniciando consumo da API...")
+
+while True:
+    # Busca dados da página atual
+    dados = buscar_pagina(pagina_atual)
+    
+    # Se não tem mais dados, para o loop
+    if dados == None:
+        print(f"Página {pagina_atual}: Sem mais dados. Finalizando...")
+        break
+    
+    # Processa os dados da página
+    print(f"Página {pagina_atual}: {dados}")
+    
+    # Adiciona os dados na lista geral
+    todos_usuarios.extend(dados)  # extend adiciona múltiplos itens
+    
+    # Vai para a próxima página
+    pagina_atual += 1
+
+print(f"\nTotal de usuários obtidos: {len(todos_usuarios)}")
+print(f"Usuários: {todos_usuarios}")
 ### Exercício 14. Tentativas de Conexão
 # Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
 
