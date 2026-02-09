@@ -182,9 +182,26 @@ print(f"Total de vendas por categoria: {total_vendas_por_categoria}")
 ### Exercício 11. Leitura de Dados até Flag
 # Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
 
+dados = []
+
+while True:
+    nome = input("Digite um nome (ou 'sair' para encerrar): ")
+    if nome == "sair":
+        break
+    dados.append(nome)
+
+print(f"Dados coletados: {dados}")
+
 ### Exercício 12. Validação de Entrada
 # Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
-
+while True:
+    numero = int(input("Digite um número entre 1 e 10: "))
+    if 1 <= numero <= 10:
+        print(f"Número válido: {numero}")
+        break
+    else:
+        print("Número inválido. Tente novamente.")
+        
 ### Exercício 13. Consumo de API Simulado
 # Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
 
