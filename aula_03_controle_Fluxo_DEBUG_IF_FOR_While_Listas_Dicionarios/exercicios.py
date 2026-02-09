@@ -140,9 +140,42 @@ print(f"Usuários incompletos: {usuarios_incompletos}")
 
 ### Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numeros_pares = []
+
+for numero in numeros:
+    if numero % 2 == 0:
+        numeros_pares.append(numero)
+
+print(f"Números pares: {numeros_pares}")
 
 ### Exercício 10. Agregação de Dados por Categoria
 # Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
+
+vendas = [
+    {'produto': 'Notebook', 'categoria': 'Eletrônicos', 'valor': 3000},
+    {'produto': 'Mouse', 'categoria': 'Eletrônicos', 'valor': 50},
+    {'produto': 'Teclado', 'categoria': 'Eletrônicos', 'valor': 150},
+    {'produto': 'Camisa', 'categoria': 'Roupas', 'valor': 80},
+    {'produto': 'Calça', 'categoria': 'Roupas', 'valor': 120},
+    {'produto': 'Tênis', 'categoria': 'Calçados', 'valor': 200},
+    {'produto': 'Sandália', 'categoria': 'Calçados', 'valor': 90},
+    {'produto': 'Celular', 'categoria': 'Eletrônicos', 'valor': 2000},
+    {'produto': 'Vestido', 'categoria': 'Roupas', 'valor': 150}
+]
+
+total_vendas_por_categoria = {}
+
+for venda in vendas:
+    categoria = venda['categoria']
+    valor_venda = venda['valor']
+
+    if categoria in total_vendas_por_categoria:
+        total_vendas_por_categoria[categoria] += valor_venda
+    else:
+        total_vendas_por_categoria[categoria] = valor_venda
+
+print(f"Total de vendas por categoria: {total_vendas_por_categoria}")
 
 ### Exercícios com WHILE
 
