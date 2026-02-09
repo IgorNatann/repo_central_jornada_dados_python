@@ -245,8 +245,31 @@ while True:
 
 print(f"\nTotal de usuários obtidos: {len(todos_usuarios)}")
 print(f"Usuários: {todos_usuarios}")
+
 ### Exercício 14. Tentativas de Conexão
 # Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
+import random
+
+def tentar_conexao():
+    """Simula uma tentativa de conexão, retornando True ou False aleatoriamente"""
+    sucesso = random.choice([True, False])  # Simula sucesso ou falha
+    return sucesso
+
+max_tentativas = 5
+tentativas = 1
+
+while tentativas <= max_tentativas:
+    print(f"Tentativa {tentativas} de {max_tentativas}")
+    if tentar_conexao():
+        print("Conexão bem-sucedida!")
+        break
+    else:
+        print("Falha na conexão. Tentando novamente...")
+
+    tentativas += 1
+
+if tentativas > max_tentativas:
+    print("Número máximo de tentativas atingido. Conexão falhou.")
 
 ### Exercício 15. Processamento de Dados com Condição de Parada
 # Processar itens de uma lista até encontrar um valor específico que indica a parada.
