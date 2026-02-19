@@ -43,3 +43,15 @@ for caractere in texto_formatado:
 print(ocorrencias)
 
 # 5- Dada a lista ["maçã", "banana", "cereja"] e o dicionário {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}, calcule o preço total da lista de compras.
+
+produtos: list[str] = ["maçã", "banana", "cereja", "laranja"]
+precos: dict[str, float] = {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}
+preco_total: float = 0.0
+
+for produto in produtos:
+    if produto in precos:
+        preco_total += precos[produto]
+    else:
+        print(f"Atenção: O produto '{produto}' não foi encontrado no dicionário de preços.")
+
+print(f"O preço total da lista de compras é: R${preco_total:.2f}")
