@@ -273,3 +273,12 @@ if tentativas > max_tentativas:
 
 ### Exercício 15. Processamento de Dados com Condição de Parada
 # Processar itens de uma lista até encontrar um valor específico que indica a parada.
+
+tarefas = ['enviar email', 'atualizar banco', 'gerar relatório', 'STOP', 'apagar arquivos', 'backup']
+
+for tarefa in tarefas:
+    if tarefa == 'STOP':
+        print("Tarefa de parada encontrada. Encerrando processamento.")
+        break
+    else:
+        print(f"Realizando tarefa: {tarefa}")
