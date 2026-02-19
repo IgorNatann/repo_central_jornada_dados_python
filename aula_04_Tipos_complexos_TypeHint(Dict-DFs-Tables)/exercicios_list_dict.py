@@ -27,4 +27,19 @@ print(f"{livros}")
 
 
 # 4- Escreva um programa que conta o número de ocorrências de cada caractere em uma string usando um dicionário.
+
+texto: str = "Hellow World"
+texto_formatado: str = texto.lower()
+
+ocorrencias: dict[str, int] = {}
+
+for caractere in texto_formatado:
+    if caractere != " ":
+        if caractere in ocorrencias:
+            ocorrencias[caractere] += 1
+        else:
+            ocorrencias[caractere] = 1
+
+print(ocorrencias)
+
 # 5- Dada a lista ["maçã", "banana", "cereja"] e o dicionário {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}, calcule o preço total da lista de compras.
