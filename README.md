@@ -1,11 +1,21 @@
 # Jornada de Dados - Python
 
-Repositorio com aulas, desafios e exercicios de Python da Jornada de Dados. Os scripts sao simples e focados em fundamentos (entrada de dados, operacoes, strings e booleanos).
+Repositorio de estudos com aulas, desafios e exercicios de Python da Jornada de Dados. O foco esta em fundamentos de programacao aplicados a cenarios de dados.
 
-## Estrutura
+## Evolucao do projeto
 
-- `aula_01/`: exemplos e desafios iniciais
-- `aula_02/`: lista de exercicios basicos
+- Aula 01: primeiros scripts com `print()`, `input()`, operacoes basicas e strings.
+- Aula 02: validacao de entradas, conversao de tipos, `try/except` e regras com `if/elif/else`.
+- Aula 03: controle de fluxo com `for` e `while`, listas, dicionarios, filtros e agregacoes.
+- Material de apoio: cola de bolso consolidando os temas estudados.
+
+## Estrutura atual
+
+- `aula_01_Python_do_Zero/`: exemplos e desafios introdutorios.
+- `aula_02_TypeError_TypeCheck/`: exercicios de tipos, validacao e tratamento de erros.
+- `aula_03_controle_Fluxo_DEBUG_IF_FOR_While_Listas_Dicionarios/`: exercicios de controle de fluxo e estruturas de dados.
+- `aula_04_Tipos_complexos_TypeHint(Dict-DFs-Tables)/`: pasta reservada para proximos conteudos.
+- `cola_de_bolso/COLA_DE_BOLSO_PYTHON.md`: resumo rapido para revisao.
 
 ## Requisitos
 
@@ -13,15 +23,24 @@ Repositorio com aulas, desafios e exercicios de Python da Jornada de Dados. Os s
 
 ## Como executar
 
-Todos os arquivos sao executados diretamente com o interpretador Python e pedem entradas via `input()`.
+Os arquivos sao independentes e podem ser executados diretamente com Python:
 
 ```bash
-python aula_01/exemplo_001.py
-python aula_01/desafio_3.py
-python aula_02/exercicios.py
+python aula_01_Python_do_Zero/exemplo_001.py
+python aula_02_TypeError_TypeCheck/exercicios.py
+python aula_03_controle_Fluxo_DEBUG_IF_FOR_While_Listas_Dicionarios/exercicios.py
 ```
+
+## Temas abordados
+
+- Entrada e saida de dados (`input`, `print`, `f-string`)
+- Conversao e validacao de tipos (`int`, `float`, `str`, `isinstance`)
+- Condicionais e operadores logicos (`if`, `elif`, `else`, `and`, `or`)
+- Tratamento de erros (`try/except`, `ValueError`, `ZeroDivisionError`)
+- Estruturas de repeticao (`for`, `while`, `break`)
+- Estruturas de dados (`list`, `dict`) com filtragem, contagem e agregacao
 
 ## Observacoes
 
-- Os arquivos sao independentes; execute um por vez.
-- Alguns exercicios ainda estao em aberto no final de `aula_02/exercicios.py`.
+- Execute um arquivo por vez para testar cada exercicio.
+- Existem exercicios em andamento no final de `aula_03_controle_Fluxo_DEBUG_IF_FOR_While_Listas_Dicionarios/exercicios.py`.
