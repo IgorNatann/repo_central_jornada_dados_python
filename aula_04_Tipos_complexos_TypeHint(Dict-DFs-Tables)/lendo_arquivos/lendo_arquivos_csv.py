@@ -1,7 +1,9 @@
 import csv
+from pathlib import Path
 
 # Caminho para o arquivo CSV
-caminho_arquivo: str = 'exemplo.csv'
+base_dir = Path(__file__).resolve().parent
+caminho_arquivo: Path = base_dir / 'exemplo.csv'
 
 # Inicializa uma lista vazia para armazenar os dados
 dados: list = []
